@@ -23,12 +23,16 @@ interface NavbarProps {
 
 export function Navbar(props: NavbarProps): React.JSX.Element {
   return (
-    <nav className="bg-gray-50 text-gray-400 border-b border-b-gray-100 py-4">
+    <header className="bg-gray-50 text-gray-400 border-b border-b-gray-100 py-4">
       <Container>
-        <ul className="flex space-x-4 text-xs leading-none uppercase">
-          {props.anchors.map((meta) => Anchor(meta))}
-        </ul>
+        <div className="text-xs leading-none flex">
+          <nav>
+            <ul className="flex space-x-4 uppercase">
+              {props.anchors.map((meta) => Anchor(meta))}
+            </ul>
+          </nav>
+        </div>
       </Container>
-    </nav>
+    </header>
   );
 }

@@ -1,9 +1,10 @@
+import { H1 } from "@/components";
 import React from "react";
 
-export default function LatestPage(): React.JSX.Element {
+export default function LatestPage() {
   return (
     <div>
-      <h1>Latest</h1>
+      <H1>Latest</H1>
     </div>
   );
 }

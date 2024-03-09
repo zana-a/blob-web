@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { Container } from "@/components";
 
-export interface AnchorMeta {
+export interface NavbarAnchorMeta {
   href: string;
   label: string;
 }
 
-function Anchor(meta: AnchorMeta): React.JSX.Element {
+function Anchor(meta: NavbarAnchorMeta) {
   return (
     <li>
       <Link href={meta.href} className="hover:text-gray-800 transition-colors">
@@ -18,10 +18,10 @@ function Anchor(meta: AnchorMeta): React.JSX.Element {
 }
 
 interface NavbarProps {
-  anchors: AnchorMeta[];
+  anchors: NavbarAnchorMeta[];
 }
 
-export function Navbar(props: NavbarProps): React.JSX.Element {
+export function Navbar(props: NavbarProps) {
   return (
     <header className="bg-gray-50 text-gray-400 border-b border-b-gray-100 py-4">
       <Container>

@@ -1,10 +1,12 @@
 import React from "react";
-import { Anchor, H1 } from "@/components";
+import { Anchor, Jumbotron } from "@/components";
 
 export default function BrowsePage() {
   return (
     <div>
-      <H1>Browse</H1>
+      <Jumbotron>
+        <Jumbotron.Title>Browse</Jumbotron.Title>
+      </Jumbotron>
       <ul>
         <li>
           <Anchor href="/categories" key={"categories"}>

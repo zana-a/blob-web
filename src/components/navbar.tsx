@@ -1,38 +1,39 @@
 import React from "react";
 import Link from "next/link";
+
 import { Container } from "@/components";
 
-export interface NavbarAnchorMeta {
-  href: string;
-  label: string;
-}
-
-function Anchor(meta: NavbarAnchorMeta) {
+function Anchor(props: { href: string; children: React.JSX.Element | string }) {
   return (
     <li>
-      <Link href={meta.href} className="hover:text-gray-800 transition-colors">
-        {meta.label}
+      <Link href={props.href} className="hover:text-gray-800 transition-colors">
+        {props.children}
       </Link>
     </li>
   );
 }
 
-interface NavbarProps {
-  anchors: NavbarAnchorMeta[];
+function Group(props: { children: React.JSX.Element | React.JSX.Element[] }) {
+  return (
+    <div className="text-xs leading-none">
+      <ul className="flex space-x-4 uppercase">{props.children}</ul>
+    </div>
+  );
 }
 
-export function Navbar(props: NavbarProps) {
+export function Navbar(props: {
+  children: React.JSX.Element | React.JSX.Element[];
+}) {
   return (
     <header className="bg-gray-50 text-gray-400 border-b border-b-gray-100 py-4">
       <Container>
-        <div className="text-xs leading-none flex">
-          <nav>
-            <ul className="flex space-x-4 uppercase">
-              {props.anchors.map((meta) => Anchor(meta))}
-            </ul>
-          </nav>
+        <div className="flex items-center justify-between">
+          {props.children}
         </div>
       </Container>
     </header>
   );
 }
+
+Navbar.Anchor = Anchor;
+Navbar.Group = Group;

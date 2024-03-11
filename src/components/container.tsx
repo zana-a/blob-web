@@ -1,9 +1,7 @@
 import React from "react";
 
-interface ContainerProps {
-  children?: React.JSX.Element;
-}
-
-export function Container(props: ContainerProps) {
+export function Container(props: {
+  children?: React.JSX.Element[] | React.JSX.Element;
+}) {
   return <div className="container px-4 mx-auto">{props.children}</div>;
 }

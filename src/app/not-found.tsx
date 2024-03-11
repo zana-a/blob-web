@@ -1,9 +1,12 @@
 import React from "react";
+import { Jumbotron } from "@/components";
 
 export default function NotFound() {
   return (
     <div>
-      <h1>Not found.</h1>
+      <Jumbotron>
+        <Jumbotron.Title>Browse</Jumbotron.Title>
+      </Jumbotron>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Anchor, H1 } from "@/components";
+import { Anchor, Jumbotron } from "@/components";
 import { CategoryModel } from "@/models";
 
 async function getCategories() {
@@ -11,7 +11,9 @@ export default async function CategoriesPage() {
 
   return (
     <div>
-      <H1>Categories</H1>
+      <Jumbotron>
+          <Jumbotron.Title>Categories</Jumbotron.Title>
+      </Jumbotron>
       <ul>
         {categories.map((category) => (
           <li key={category.id}>

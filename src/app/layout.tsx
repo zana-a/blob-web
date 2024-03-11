@@ -8,8 +8,6 @@ interface RootLayoutProps {
 
 const anchors: NavbarAnchorMeta[] = [
   { href: "/", label: "Home" },
-  { href: "/latest", label: "Latest" },
-  { href: "/trending", label: "Trending" },
   { href: "/browse", label: "Browse" },
 ];
 

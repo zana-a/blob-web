@@ -7,13 +7,13 @@ export default function BrowsePage() {
       <H1>Browse</H1>
       <ul>
         <li>
-          <Anchor href="/browse/categories" key={"categories"}>
+          <Anchor href="/categories" key={"categories"}>
             Categories
           </Anchor>
         </li>
         <li>
-          <Anchor href="/browse/date" key={"categories"}>
-            Date
+          <Anchor href="/posts" key={"categories"}>
+            Posts
           </Anchor>
         </li>
       </ul>

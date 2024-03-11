@@ -1,5 +1,6 @@
-import { Anchor, H1 } from "@/components";
 import React from "react";
+
+import { Anchor, H1 } from "@/components";
 import { PostModel } from "@/models";
 
 async function getPosts(id: number) {
@@ -25,7 +26,7 @@ export default async function IdPage(props: IdPageProps) {
           <li key={post.id}>
             <Anchor
               key={post.id}
-              href={`/browse/categories/${props.params.categoryId}/post/${post.id}`}
+              href={`/posts/${post.id}`}
             >
               {post.id.toString()}: {post.title}
             </Anchor>

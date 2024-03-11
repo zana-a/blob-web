@@ -15,7 +15,7 @@ export default async function CategoriesPage() {
       <ul>
         {categories.map((category) => (
           <li key={category.id}>
-            <Anchor href={`/browse/categories/${category.id}`}>
+            <Anchor href={`/categories/${category.id}`}>
               {category.name}
             </Anchor>
           </li>
